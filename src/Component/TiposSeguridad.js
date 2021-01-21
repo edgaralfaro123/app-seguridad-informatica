@@ -26,10 +26,10 @@ const TiposSeguridad = (props) => {
 
     return (
         <>
-                <View style={{ flex:1, flexDirection:'row',alignItems:'center'}}>
+            <View style={{  flexDirection:'row',alignItems:'center'}}>
                 {arraytiposseguridad.length>0 && (
                     arraytiposseguridad.map((value,key)=>(
-                        
+
                             <TouchableOpacity
                                 style={{
                                     alignItems: 'center',
@@ -37,24 +37,24 @@ const TiposSeguridad = (props) => {
                                 }}
                                 onPress={() =>abrirCategoria(value)}
                             >
-                                <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center' }}>
-                                    <Image
-                                        source={{ uri: value.logo }}
-                                        style={{
-                                        width: Dimensions.get('window').width * 0.11,
-                                        height: Dimensions.get('window').height * 0.11,
-                                        borderRadius: 12,
-                                        borderColor:'red',
-                                        
-                                        }}
-                                    />
-                                </View>
+                                <View style={{ flexDirection: 'column'}}>
+                                    <View style={{  justifyContent: 'center', alignItems: 'center' }}>
+                                        <Image
+                                            source={{ uri: value.logo }}
+                                            style={{
+                                            width: Dimensions.get('window').width * 0.40,
+                                            height: Dimensions.get('window').height * 0.11,
+                                            borderRadius: 12,
+                                            borderColor:'red',
+                                            
+                                            }}
+                                        />
+                                    </View>
                                 
-                                <View style={{flex: 1, flexDirection: 'column'}}>
-                                    <View style={{ flex: 1 , justifyContent: 'center' , alignItems: 'center'}}>
+                                    <View style={{  justifyContent: 'center' , alignItems: 'center'}}>
                                         <Text >{value.nombre}</Text>
                                     </View>
-                                    <View style={{ flex: 1 , justifyContent: 'center' , alignItems: 'center'}}>
+                                    <View style={{ justifyContent: 'center' , alignItems: 'center'}}>
                                         <Text >{value.descripcion}</Text>
                                     </View>
                                 </View>
