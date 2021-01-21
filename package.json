@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.0",
-    "react": "16.13.1",
+    "react": "16.13.1", 
     "react-native": "0.63.4",
     "react-native-simple-radio-button": "^2.7.4",
     "react-native-simple-toast": "^1.1.2",
@@ -30,5 +30,12 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "documentacion": {
+    "react-native-skeleton-placeholder" : "loading mientras cargan las apis forma de importar import SkeletonPlaceholder from \"react-native-skeleton-placeholder\"; ",
+    "react-native-linear-gradient" : "loading mientras cargan las apis",
+    "react-native-simple-radio-button" : "libreria para manejar radio button import "
   }
+  
 }
+

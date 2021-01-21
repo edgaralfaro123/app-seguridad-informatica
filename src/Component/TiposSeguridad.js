@@ -18,8 +18,14 @@ import {
 const TiposSeguridad = (props) => {
     console.log("props",props);
     const { arraytiposseguridad=[]}= props;
+
+    const abrirCategoria = (value) => {
+        console.log("valor seleccion",value)
+    }
+
     return (
         <>
+
             {arraytiposseguridad.length>0 && (
                 arraytiposseguridad.map((value)=>(
                     <TouchableOpacity
@@ -27,9 +33,9 @@ const TiposSeguridad = (props) => {
                         alignItems: 'center',
                         padding: 10,
                         }}
-                       /*  onPress={() => {
-                        this.takePhotoFromCamera(this.state.actu);
-                        }} */
+                        onPress={() => {
+                            abrirCategoria(value);
+                        }}
                         >
                         <Text >{value.nombre}</Text>
                     </TouchableOpacity>

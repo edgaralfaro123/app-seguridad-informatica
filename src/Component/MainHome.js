@@ -21,13 +21,19 @@ import SkeletonPlaceholder from "react-native-skeleton-placeholder";
 import TiposSeguridad from './TiposSeguridad'
 
 let tipo =  [{
-    codigo: "1",
-    nombre: "Criptografia",
-    detalle: "detalle criptografia"
+        codigo: "1",
+        nombre: "Criptografia",
+        detalle: "detalle criptografia",
+        logo: "imagenlogo",
+        imagenes: ["rutaimagen"],
+        descripcion: ["texto que se va a mostrar"]
     },{
         codigo: "2",
         nombre: "Testing",
-        detalle:"detalle testing"
+        detalle: "detalle testing",
+        logo: "imagenlogo",
+        imagenes: ["rutaimagen"],
+        descripcion: ["texto que se va a mostrar"]
     }
 ]
 
