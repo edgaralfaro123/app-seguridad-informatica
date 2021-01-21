@@ -31,7 +31,7 @@ const TiposSeguridad = (props) => {
                         this.takePhotoFromCamera(this.state.actu);
                         }} */
                         >
-                        <Text >{value}</Text>
+                        <Text >{value.nombre}</Text>
                     </TouchableOpacity>
                 ))
             )}

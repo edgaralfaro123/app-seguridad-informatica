@@ -13,16 +13,59 @@ import {
     ActivityIndicator,
     ToastAndroid
 } from 'react-native';
+/* import {  Metrics } from "../Themes"; */
+//manejo libreria skeleton
+import SkeletonPlaceholder from "react-native-skeleton-placeholder";
+
 
 import TiposSeguridad from './TiposSeguridad'
-    let arrayTipos=[1,2,3];
+
+let tipo =  [{
+    codigo: "1",
+    nombre: "Criptografia",
+    detalle: "detalle criptografia"
+    },{
+        codigo: "2",
+        nombre: "Testing",
+        detalle:"detalle testing"
+    }
+]
 
 const MainHome = () => {
+    const [isLoading,setisLoading]=useState(true);
+    const [arrayTipos,setarrayTipos]=useState([]);
+
+    useEffect(() => {
+        setTimeout(function(){ 
+            setisLoading(false);
+            setarrayTipos(tipo);
+        }, 3000);
+        
+    }, [])
 
     return (
         <>
             <Text>Hola</Text>
-            <TiposSeguridad arraytiposseguridad={arrayTipos}></TiposSeguridad>
+            {(isLoading) ? 
+                (
+                    <SkeletonPlaceholder>
+                        <SkeletonPlaceholder.Item flexDirection="column" alignItems="center" >
+                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} marginTop={25}/>
+                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
+                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
+                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
+                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
+                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
+                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
+                        </SkeletonPlaceholder.Item>
+                    </SkeletonPlaceholder>          
+                )
+                :
+                (
+                    <TiposSeguridad arraytiposseguridad={arrayTipos}></TiposSeguridad>
+                )
+             
+            }
         </>
     )
 }
