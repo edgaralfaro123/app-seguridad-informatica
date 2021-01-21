@@ -24,14 +24,14 @@ let tipo =  [{
         codigo: "1",
         nombre: "Criptografia",
         detalle: "detalle criptografia",
-        logo: "imagenlogo",
+        logo: "https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg",
         imagenes: ["rutaimagen"],
         descripcion: ["texto que se va a mostrar"]
     },{
         codigo: "2",
         nombre: "Testing",
         detalle: "detalle testing",
-        logo: "imagenlogo",
+        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
         imagenes: ["rutaimagen"],
         descripcion: ["texto que se va a mostrar"]
     }
@@ -51,7 +51,7 @@ const MainHome = () => {
 
     return (
         <>
-            <Text>Hola</Text>
+            <Text>header</Text>
             {(isLoading) ? 
                 (
                     <SkeletonPlaceholder>

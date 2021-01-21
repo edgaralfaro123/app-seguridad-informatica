@@ -11,12 +11,13 @@
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.0",
-    "react": "16.13.1", 
+    "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-simple-radio-button": "^2.7.4",
     "react-native-simple-toast": "^1.1.2",
     "react-native-skeleton-placeholder": "^2.0.7",
-    "react-native-linear-gradient": "^2.5.6"
+    "react-native-linear-gradient": "^2.5.6",
+    "reactstrap": "8.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -32,10 +33,9 @@
     "preset": "react-native"
   },
   "documentacion": {
-    "react-native-skeleton-placeholder" : "loading mientras cargan las apis forma de importar import SkeletonPlaceholder from \"react-native-skeleton-placeholder\"; ",
-    "react-native-linear-gradient" : "loading mientras cargan las apis",
-    "react-native-simple-radio-button" : "libreria para manejar radio button import "
+    "react-native-skeleton-placeholder": "loading mientras cargan las apis forma de importar import SkeletonPlaceholder from \"react-native-skeleton-placeholder\"; ",
+    "react-native-linear-gradient": "loading mientras cargan las apis",
+    "react-native-simple-radio-button": "libreria para manejar radio button import ",
+    "reactstrap": "hojas de estilo"
   }
-  
 }
-
