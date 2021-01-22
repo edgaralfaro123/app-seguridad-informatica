@@ -21,19 +21,25 @@ const TiposSeguridad = (props) => {
     const { arraytiposseguridad = [] , buscar:abrirCategoria = undefined } = {...props};
     return (
         <>
-            <View style={{ flexDirection:'row' , alignItems:'center' }}>
+            
                 {arraytiposseguridad.length>0 && (
                     arraytiposseguridad.map((value,key)=>(
 
                             <TouchableOpacity
                                 style={{
-                                    alignItems: 'center',
-                                    padding: 10,
-                                }}
+                                    flex: 1,
+                                    position: 'relative',
+                                    height: ((Dimensions.get('window').height/2)-260),
+                                    overflow: 'hidden',
+                                    borderRadius: 5,
+                                    margin: 10
+                                    /* alignItems: 'center',
+                                    padding: 10, */
+                                },{backgroundColor: 'gray'}}
                                 onPress={() =>abrirCategoria(value)}
                             >
-                                <View style={{ flexDirection: 'column'}}>
-                                    <View style={{  justifyContent: 'center', alignItems: 'center' }}>
+                                <View style={{ flexDirection:'row' , alignItems:'center' }}>
+                                    <View style={{ flex: 0.8, flexDirection: 'column'}}>
                                         <Image
                                             source={{ uri: value.logo }}
                                             style={{
@@ -45,19 +51,21 @@ const TiposSeguridad = (props) => {
                                             }}
                                         />
                                     </View>
-                                
-                                    <View style={{  justifyContent: 'center' , alignItems: 'center'}}>
-                                        <Text >{value.nombre}</Text>
+                                    <View style={{flex: 1,flexDirection: 'column'}}> 
+                                        <View style={{  flex: 1, justifyContent: 'center' , alignItems: 'center'}}>
+                                            <Text >{value.nombre}</Text>
+                                        </View>
+                                        <View style={{ justifyContent: 'center' , alignItems: 'center'}}>
+                                            <Text  sryle={{color:'gray'}} numberOfLines={3}>{value.descripcion}</Text>
+                                        </View>
                                     </View>
-                                    <View style={{ justifyContent: 'center' , alignItems: 'center'}}>
-                                        <Text  sryle={{color:'gray'}} numberOfLines={3}>{value.descripcion}</Text>
-                                    </View>
+                                    
                                 </View>
                             </TouchableOpacity>
 
                     ))
                 )}
-            </View>
+            
         </>
     )
 }

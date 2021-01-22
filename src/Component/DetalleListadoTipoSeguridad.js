@@ -17,21 +17,21 @@ import {
 } from 'react-native';
 
 const DetalleListadoTipoSeguirdad = (props) =>{
-    const {arrayDetalleListadoTipos=[] } = {...props}
-    console.log("arrayDetalleListadoTipos",arrayDetalleListadoTipos);
+    const {arrayDetalleListadoTipos = [] } = {...props}
+    console.log("arrayDetalleListadoTipos", arrayDetalleListadoTipos);
     return (
         <>
             { (arrayDetalleListadoTipos.length>0) && (
                 arrayDetalleListadoTipos.map((value)=>(
 
                     (value.tipo !== undefined) ?
-                        //Valido si viene texto
-                        (value.tipo=='texto') ?
+                        //Valido si viene un texto
+                        (value.tipo == 'texto') ?
                             <View style={{marginBottom: 5,marginTop: 5}}>
                                 <Text>{value.valor}</Text>
                             </View>
                         :
-                            //Valido si viene imagen
+                            //Valido si viene una imagen
                             (value.tipo=='imagen') ? 
                                 <View style={{marginBottom: 5,marginTop: 5}}>
                                     <Image
