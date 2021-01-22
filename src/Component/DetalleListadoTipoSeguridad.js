@@ -16,10 +16,41 @@ import {
     Dimensions
 } from 'react-native';
 
-const DetalleListadoTipoSeguirdad = () =>{
-
+const DetalleListadoTipoSeguirdad = (props) =>{
+    const {arrayDetalleListadoTipos=[] } = {...props}
+    console.log("arrayDetalleListadoTipos",arrayDetalleListadoTipos);
     return (
-        <Text>Detalle listado Tipo seguridad</Text>
+        <>
+            { (arrayDetalleListadoTipos.length>0) && (
+                arrayDetalleListadoTipos.map((value)=>(
+
+                    (value.tipo !== undefined) ?
+                        //Valido si viene texto
+                        (value.tipo=='texto') ?
+                            <View style={{margin: 10}}>
+                                <Text>{value.valor}</Text>
+                            </View>
+                        :
+                            //Valido si viene imagen
+                            (value.tipo=='imagen') ? 
+                                <Image
+                                    source={{ uri: value.valor }}
+                                    style={{
+                                        width: Dimensions.get('window').width * 0.40,
+                                        height: Dimensions.get('window').height * 0.11,
+                                        borderRadius: 12,
+                                        borderColor:'red',
+                                    }}
+                                />
+                            :
+                                ''
+                    :
+                        ''
+                ))
+                
+            )}
+        </>
+        
     )
 }
 

@@ -41,7 +41,7 @@ const ListadoTiposSeguridad = (props) => {
                             }}
                         />
                         <Text>{value.nombre}</Text>
-                        <Text>{value.descripcion}</Text>
+                        <Text numberOfLines={3}>{value.descripcion}</Text>
                     </TouchableOpacity>
                     
                 ))

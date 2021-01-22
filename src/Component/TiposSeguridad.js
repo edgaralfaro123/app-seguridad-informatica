@@ -50,7 +50,7 @@ const TiposSeguridad = (props) => {
                                         <Text >{value.nombre}</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center' , alignItems: 'center'}}>
-                                        <Text  sryle={{color:'gray'}}>{value.descripcion}</Text>
+                                        <Text  sryle={{color:'gray'}} numberOfLines={3}>{value.descripcion}</Text>
                                     </View>
                                 </View>
                             </TouchableOpacity>

@@ -11,7 +11,8 @@ import {
     StatusBar,
     ScrollView,
     ActivityIndicator,
-    ToastAndroid
+    ToastAndroid,
+    Dimensions
 } from 'react-native';
 /* import {  Metrics } from "../Themes"; */
 //manejo libreria skeleton
@@ -116,8 +117,9 @@ const MainHome = () => {
     }
 
     const abrirSubCategoria = (value) =>{
+        console.log("abrirSubCategoria",value);
         //Ingresar a subcategoria o detalle tipo de seguridad y listar detalle asociadas a la subcategoria
-        /* setarrayDetalleListadoTipos(value.subcategorias === undefined ? [] : value.subcategorias) */
+        setarrayDetalleListadoTipos(value.detalle === undefined ? [] : value.detalle)
         setmostrarTiposSeguridad(false); 
         setmostrarListadoTiposSeguridad(false);
         setmostrarDetalleListadoTiposSeguridad(true);
@@ -141,32 +143,35 @@ const MainHome = () => {
     return (
         <>
             <Header titulo={titulo} retornar={retorno} validarpaginaprincipal={mostrarTiposSeguridad} ></Header>
-            {(isLoading) ? 
-                (
-                    <SkeletonPlaceholder>
-                        <SkeletonPlaceholder.Item flexDirection="column" alignItems="center" >
-                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} marginTop={25}/>
-                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
-                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
-                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
-                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
-                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
-                            <SkeletonPlaceholder.Item width={500} height={80} marginBottom={16} />
-                        </SkeletonPlaceholder.Item>
-                    </SkeletonPlaceholder>
-                )
-                :
-                (
-                    (mostrarTiposSeguridad) ?
-                        <TiposSeguridad arraytiposseguridad={arrayTipos} buscar={abrirCategoria}></TiposSeguridad>
+
+            <ScrollView style={{marginHorizontal: 25,  overflow: 'hidden'}} showsVerticalScrollIndicator={false}>
+                {(isLoading) ? 
+                    (
+                        <SkeletonPlaceholder>
+                            <SkeletonPlaceholder.Item flexDirection="column" alignItems="center" >
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} marginTop={25}/>
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
+                            </SkeletonPlaceholder.Item>
+                        </SkeletonPlaceholder>
+                    )
                     :
-                        (mostrarListadoTiposSeguridad) ?
-                            <ListadoTipoSeguridad arrayListadoTipos={arrayListadoTipos} buscar={abrirSubCategoria}></ListadoTipoSeguridad>
+                    (   
+                        (mostrarTiposSeguridad) ?
+                            <TiposSeguridad arraytiposseguridad={arrayTipos} buscar={abrirCategoria}></TiposSeguridad>
                         :
-                            <DetalleListadoTipoSeguirdad></DetalleListadoTipoSeguirdad>
-                )
-             
-            }
+                            (mostrarListadoTiposSeguridad) ?
+                                <ListadoTipoSeguridad arrayListadoTipos={arrayListadoTipos} buscar={abrirSubCategoria}></ListadoTipoSeguridad>
+                            :
+                                <DetalleListadoTipoSeguirdad arrayDetalleListadoTipos={arrayDetalleListadoTipos}></DetalleListadoTipoSeguirdad>
+                    )
+                
+                }
+            </ScrollView>
         </>
     )
 }
