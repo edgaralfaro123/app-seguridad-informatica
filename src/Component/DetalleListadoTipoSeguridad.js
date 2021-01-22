@@ -27,21 +27,23 @@ const DetalleListadoTipoSeguirdad = (props) =>{
                     (value.tipo !== undefined) ?
                         //Valido si viene texto
                         (value.tipo=='texto') ?
-                            <View style={{margin: 10}}>
+                            <View style={{marginBottom: 5,marginTop: 5}}>
                                 <Text>{value.valor}</Text>
                             </View>
                         :
                             //Valido si viene imagen
                             (value.tipo=='imagen') ? 
-                                <Image
-                                    source={{ uri: value.valor }}
-                                    style={{
-                                        width: Dimensions.get('window').width * 0.40,
-                                        height: Dimensions.get('window').height * 0.11,
-                                        borderRadius: 12,
-                                        borderColor:'red',
-                                    }}
-                                />
+                                <View style={{marginBottom: 5,marginTop: 5}}>
+                                    <Image
+                                        source={{ uri: value.valor }}
+                                        style={{
+                                            width: Dimensions.get('window').width * 0.85,
+                                            height: Dimensions.get('window').height * 0.20,
+                                            borderRadius: 30,
+                                            borderColor:'red',
+                                        }}
+                                    />
+                                </View>
                             :
                                 ''
                     :

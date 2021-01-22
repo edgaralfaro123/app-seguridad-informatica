@@ -40,7 +40,7 @@ const ListadoTiposSeguridad = (props) => {
                             borderColor:'red',
                             }}
                         />
-                        <Text>{value.nombre}</Text>
+                        <Text >{value.nombre}</Text>
                         <Text numberOfLines={3}>{value.descripcion}</Text>
                     </TouchableOpacity>
                     

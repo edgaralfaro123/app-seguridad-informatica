@@ -117,13 +117,12 @@ const MainHome = () => {
     }
 
     const abrirSubCategoria = (value) =>{
-        console.log("abrirSubCategoria",value);
         //Ingresar a subcategoria o detalle tipo de seguridad y listar detalle asociadas a la subcategoria
         setarrayDetalleListadoTipos(value.detalle === undefined ? [] : value.detalle)
         setmostrarTiposSeguridad(false); 
         setmostrarListadoTiposSeguridad(false);
         setmostrarDetalleListadoTiposSeguridad(true);
-        settitulo(value.nombre);
+        settitulo(value.nombre === undefined ? '' : value.nombre);
     }
 
     const retorno = () =>{
