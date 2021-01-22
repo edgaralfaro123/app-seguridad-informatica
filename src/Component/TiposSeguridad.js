@@ -17,16 +17,11 @@ import {
 } from 'react-native';
 
 const TiposSeguridad = (props) => {
-    console.log("props",props);
-    const { arraytiposseguridad=[]}= props;
-
-    const abrirCategoria = (value) => {
-        console.log("valor seleccion",value);
-    }
-
+    console.log("props" , props);
+    const { arraytiposseguridad = [] , buscar:abrirCategoria = undefined } = {...props};
     return (
         <>
-            <View style={{  flexDirection:'row',alignItems:'center'}}>
+            <View style={{ flexDirection:'row' , alignItems:'center' }}>
                 {arraytiposseguridad.length>0 && (
                     arraytiposseguridad.map((value,key)=>(
 
@@ -55,11 +50,11 @@ const TiposSeguridad = (props) => {
                                         <Text >{value.nombre}</Text>
                                     </View>
                                     <View style={{ justifyContent: 'center' , alignItems: 'center'}}>
-                                        <Text >{value.descripcion}</Text>
+                                        <Text  sryle={{color:'gray'}}>{value.descripcion}</Text>
                                     </View>
                                 </View>
                             </TouchableOpacity>
-                        
+
                     ))
                 )}
             </View>
