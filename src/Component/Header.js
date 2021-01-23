@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-around',
       alignItems: 'center',
       alignContent: 'center',
-      backgroundColor: '#0046ff',//
+      backgroundColor: '#86b96e',//
       position: 'relative'
     },
     statusBar:{
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         },
       }),
       paddingTop: 30,
-      backgroundColor: '#0046ff',
+      backgroundColor: '#86b96e',
     },
     content: {
       flex: 1,
