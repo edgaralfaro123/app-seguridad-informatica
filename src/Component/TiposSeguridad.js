@@ -15,6 +15,7 @@ import {
     TouchableOpacity,
     Dimensions
 } from 'react-native';
+import Colors from "../Themes/Colors";
 
 const TiposSeguridad = (props) => {
     console.log("props" , props);
@@ -24,16 +25,16 @@ const TiposSeguridad = (props) => {
             
                 {arraytiposseguridad.length>0 && (
                     arraytiposseguridad.map((value,key)=>(
-                            <View style={{marginTop:15,marginLeft:5,marginRight:5, borderTopRightRadius:30}}>
+                            <View style={{marginTop:15,marginLeft:5,marginRight:5, borderTopRightRadius:30}} key={key}>
                                 <TouchableOpacity
                                     style={{
                                         flex: 1,
                                         position: 'relative',
                                         height: ((Dimensions.get('window').height/2)-260),
                                         overflow: 'hidden',
-                                        borderRadius: 90,
-                                        margin: 50
-                                    },{backgroundColor: '#86b96e'}}
+                                        
+                                        margin: 90
+                                    },{backgroundColor: Colors.secondary,  borderRadius: 20}}
                                     onPress={() =>abrirCategoria(value)}
                                 >
                                     <View style={{ flexDirection:'row' , alignItems:'center' }}>
@@ -47,15 +48,16 @@ const TiposSeguridad = (props) => {
                                                 borderBottomRightRadius:30,
                                                 borderColor:'red',
                                                 
+                                                
                                                 }}
                                             />
                                         </View>
                                         <View style={{flex: 1,flexDirection: 'column'}}> 
                                             <View style={{  flex: 1, justifyContent: 'center' , alignItems: 'center'}}>
-                                                <Text style={{color:'white',fontWeight: 'bold'}}>{value.nombre}</Text>
+                                                <Text style={{color:Colors.helper,fontWeight: 'bold'}}>{value.nombre}</Text>
                                             </View>
                                             <View style={{flex: 1, justifyContent: 'center' , alignItems: 'center'}}>
-                                                <Text  style={{color:'white'}} numberOfLines={3}>{value.descripcion}</Text>
+                                                <Text  style={{color: Colors.back}} numberOfLines={3}>{value.descripcion}</Text>
                                             </View>
                                         </View>
                                         

@@ -22,13 +22,14 @@ import SkeletonPlaceholder from "react-native-skeleton-placeholder";
 import TiposSeguridad from './TiposSeguridad';
 import ListadoTipoSeguridad from './ListadoTipoSeguridad';
 import DetalleListadoTipoSeguirdad from './DetalleListadoTipoSeguridad';
-import Header from './Header'
+import Header from './Header';
+import Colors from "../Themes/Colors";
 
 let tipo =  [{
         codigo: "1",
         nombre: "Criptografia",
         descripcion: "detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia  detalle criptografia",
-        logo: "https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg",
+        logo: "https://res.cloudinary.com/dysuz95o1/image/upload/v1611445959/Finger_print_Flatline_xdqqbs.png",
         subcategorias: [
             { 
               nombre: 'Testeo' , 
@@ -403,7 +404,7 @@ const MainHome = () => {
 
     return (
         <>
-            <Header titulo={titulo} retornar={retorno} validarpaginaprincipal={mostrarTiposSeguridad} ></Header>
+            <Header titulo={titulo} retornar={retorno} validarpaginaprincipal={mostrarTiposSeguridad} Colores={Colors.secondary}></Header>
 
             <ScrollView style={{marginHorizontal: 5,  overflow: 'hidden'}} showsVerticalScrollIndicator={false}>
                 {(isLoading) ? 

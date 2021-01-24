@@ -10,9 +10,10 @@ import {
   StatusBar,
   Button
 } from 'react-native';
+import Colors from "../Themes/Colors";
 
 function Header(props){
-    const { titulo ='',retornar:retorno=undefined,validarpaginaprincipal=true} ={...props}
+    const { titulo ='',retornar:retorno=undefined, validarpaginaprincipal=true} ={...props}
     return (
       <SafeAreaView style={[styles.statusBar]}>
         {/* <StatusBar barStyle="light-content" backgroundColor={Colors.primary}/> */}
@@ -37,7 +38,7 @@ function Header(props){
 
           {/* CENTER BUTTON */}
           <View style={[styles.content, {alignItems: 'center', justifyContent: 'center', position: 'relative'}]}>
-                <Text style={{color:'white',fontWeight: 'bold'}}>{titulo}</Text>
+                <Text style={{color:Colors.helper,fontWeight: 'bold', fontFamily: "Poppins-Thin"}}>{titulo}</Text>
           </View>
         </View>
       </SafeAreaView>
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-around',
       alignItems: 'center',
       alignContent: 'center',
-      backgroundColor: '#86b96e',//
+      backgroundColor: Colors.primary,//
       position: 'relative'
     },
     statusBar:{
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
         },
       }),
       paddingTop: 30,
-      backgroundColor: '#86b96e',
+      backgroundColor: Colors.primary,
     },
     content: {
       flex: 1,
