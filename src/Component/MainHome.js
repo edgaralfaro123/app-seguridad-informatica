@@ -27,9 +27,9 @@ import Colors from "../Themes/Colors";
 
 let tipo =  [{
         codigo: "1",
-        nombre: "Criptografia",
-        descripcion: "detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia  detalle criptografia",
-        logo: "https://res.cloudinary.com/dysuz95o1/image/upload/v1611445959/Finger_print_Flatline_xdqqbs.png",
+        nombre: "Fundamentos de comunicaciones",
+        descripcion: "Conceptos basicos de seguridad y conceptos generales",
+        logo: "https://res.cloudinary.com/dysuz95o1/image/upload/v1611510065/World_wide_web_Monochromatic_oj0p9c.png",
         subcategorias: [
             { 
               nombre: 'Testeo' , 
@@ -56,10 +56,10 @@ let tipo =  [{
         ]
     },
     {
-        codigo: "1",
-        nombre: "Criptografia",
-        descripcion: "detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia detalle criptografia  detalle criptografia",
-        logo: "https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg",
+        codigo: "2",
+        nombre: "Fundamentos de seguridad informática",
+        descripcion: "Tipos de malware, Tipos de hackers, Tipos de ataques y principios pentestin",
+        logo: "https://res.cloudinary.com/dysuz95o1/image/upload/v1611510380/Online_protection_Monochromatic_rdxbvw.png",
         subcategorias: [
             { 
               nombre: 'Testeo' , 
@@ -85,242 +85,10 @@ let tipo =  [{
             }
         ]
     },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-        subcategorias: [
-            { 
-              nombre: 'Testeo' , 
-              descripcion: 'Testeo',
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
-            },
-            { 
-              nombre: 'Async' , 
-              descripcion: 'Await' ,
-              logo:"https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
-              detalle: [
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
-                    {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-              ]
-            }
-        ]
-    },{
-        codigo: "2",
-        nombre: "Testing",
-        descripcion: "detalle testing",
-        logo: "https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg",
+        codigo: "3",
+        nombre: "Estándares",
+        descripcion: "ISO 27000, ISO 27001 y 27002",
+        logo: "https://res.cloudinary.com/dysuz95o1/image/upload/v1611511033/Data_organization_Monochromatic_atg1vn.png",
         subcategorias: [
             { 
               nombre: 'Testeo' , 

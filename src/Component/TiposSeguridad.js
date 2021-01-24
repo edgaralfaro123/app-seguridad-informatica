@@ -44,8 +44,7 @@ const TiposSeguridad = (props) => {
                                                 style={{
                                                 width: Dimensions.get('window').width * 0.40,
                                                 height: Dimensions.get('window').height * 0.11,
-                                                borderTopLeftRadius:30,
-                                                borderBottomRightRadius:30,
+                                                borderRadius:20,
                                                 borderColor:'red',
                                                 
                                                 

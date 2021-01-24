@@ -23,17 +23,18 @@ function Header(props){
           { (!validarpaginaprincipal) && (
                 <TouchableOpacity 
                     onPress={retorno}
-                    style={[{alignItems: 'flex-start',justifyContent: 'center', position: 'absolute', left: 0, padding: 15}]}>
+                    style={[{alignItems: 'flex-start',justifyContent: 'center', position: 'absolute', left: 0}]}>
                     <Image 
                     source={require('../../assets/icons/back-bk-ico.png')} 
                     style={{
-                        width: 20,
-                        height: 20,
-                        resizeMode: 'cover',
+                        width: 70,
+                        height: 70,
+                        resizeMode: 'cover'
+                        
                     }}
                     />
                 </TouchableOpacity>
-           )}
+          )}
             
 
           {/* CENTER BUTTON */}
