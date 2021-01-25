@@ -40,7 +40,8 @@ let tipo =  [{
                 {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-            ]
+                ],
+              parimpar: 'par'
             },
             { 
               nombre: 'Async' , 
@@ -51,7 +52,32 @@ let tipo =  [{
                 {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
+                ],
+                parimpar: 'impar'
+            },
+            { 
+              nombre: 'Async' , 
+              descripcion: 'Await' ,
+              logo:"https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg",
+              detalle: [
+                {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
+                {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg'},
+                {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
+                {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
+                ],
+              parimpar: 'par'
+            },
+            { 
+              nombre: 'Async' , 
+              descripcion: 'Await' ,
+              logo:"https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg",
+              detalle: [
+                {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
+                {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg'},
+                {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
+                {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
+                ],
+                parimpar: 'impar'
             }
         ]
     },
@@ -81,7 +107,8 @@ let tipo =  [{
                 {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
+                ],
+                parimpar: 'impar'
             }
         ]
     },{
