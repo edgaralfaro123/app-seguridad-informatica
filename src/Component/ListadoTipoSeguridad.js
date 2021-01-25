@@ -34,14 +34,16 @@ const ListadoTiposSeguridad = (props) => {
                         <Image
                             source={{ uri: value.logo }}
                             style={{
-                            width: Dimensions.get('window').width * 0.40,
-                            height: Dimensions.get('window').height * 0.11,
+                            width: Dimensions.get('window').width * 0.9,
+                            height: Dimensions.get('window').height * 0.15,
                             borderRadius: 12,
                             borderColor:'red',
+                            transform: [{ rotate: '3deg' }]
                             }}
                         />
-                        <Text >{value.nombre}</Text>
-                        <Text numberOfLines={3}>{value.descripcion}</Text>
+                        <Text style={{position:'absolute',transform: [{ rotate: '5deg' }],marginTop:15,color:'white'}}>{value.nombre}</Text>
+                        <Text style={{position:'absolute',transform: [{ rotate: '5deg' }],marginTop:30,color:'white'}} numberOfLines={3} numberOfLines={3}>{value.descripcion}</Text>
+                        
                     </TouchableOpacity>
                     
                 ))

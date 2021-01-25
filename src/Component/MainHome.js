@@ -198,8 +198,12 @@ const MainHome = () => {
                            
                         :
                             (mostrarListadoTiposSeguridad) ?
+                            <View style={{marginTop:10}}>
                                 <ListadoTipoSeguridad arrayListadoTipos={arrayListadoTipos} buscar={abrirSubCategoria}></ListadoTipoSeguridad>
-                            :
+                            </View>
+                                
+                            :   
+                            
                                 <DetalleListadoTipoSeguirdad arrayDetalleListadoTipos={arrayDetalleListadoTipos}></DetalleListadoTipoSeguirdad>
                     )
                 
