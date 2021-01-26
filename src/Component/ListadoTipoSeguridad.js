@@ -28,77 +28,84 @@ const ListadoTiposSeguridad = (props) => {
         }
     }
 
+    let imagen='';
+    let titulo='';
+    let descripcion='';
+
+    const asignarPar = (logo,nombre,descripcion) => {
+        imagen=logo;
+        titulo=nombre;
+        descripcion=descripcion;
+    }
+    
     return (
         <>
-            <View style={{marginTop:15,marginRight:5,flex:0.5,flexDirection:'row', borderTopRightRadius:30}} >     
+           
                 {arrayListadoTipos.length>0 && (
 
                     arrayListadoTipos.map((value)=>(
-                            value.parimpar==="par" ?
-                            <View style={{flex:1,flexDirection:'column'}} > 
-                                <TouchableOpacity
-                                    style={{
-                                        padding: 10,
-                                        flex: 1,
-                                       
-                                       
-                                        height: ((Dimensions.get('window').height/2)-260),
-                                        overflow: 'hidden'
-                                    }}
-                                    onPress={() =>abrirSubCategoria(value)}
-                                >
-
-                                    <Image
-                                        source={{ uri: value.logo }}
-                                        style={{
-                                            width: Dimensions.get('window').width * 0.5,
-                                            height: Dimensions.get('window').height * 0.15,
-                                            //borderRadius: 12,
-                                            borderColor:'red',
-                                            
-                                            transform: [{ rotate: '3deg' }]
-                                        }}
-                                    />
-                                    <Text style={{position:'absolute',transform: [{ rotate: '5deg' }],marginTop:15,marginLeft:20,color:'white'}}>{value.nombre}</Text>
-                                    <Text style={{position:'absolute',transform: [{ rotate: '5deg' }],marginTop:30,marginLeft:20,color:'white'}} numberOfLines={3} numberOfLines={3}>par{value.descripcion}</Text>
-                                
-                                </TouchableOpacity>
-                                </View>
+                        <View style={{marginTop:-9,marginRight:3,marginBottom:1,flex:1,flexDirection:'row'}} >
+                            {value.parimpar==="par" ?
+                                asignarPar(value.logo,value.nombre,value.descripcion)
                             :
-                            <View style={{flex:1,flexDirection:'column'}} >
-                                    <TouchableOpacity
-                                        style={{
-                                            padding: 10,
-                                            flex: 1,
-                                            flexDirection: 'column',
-                                            justifyContent: 'space-between',
-                                            height: ((Dimensions.get('window').height/2)-260),
-                                            overflow: 'hidden'
-                                        }}
-                                        onPress={() =>abrirSubCategoria(value)}
-                                    >
-
-                                        <Image
-                                            source={{ uri: value.logo }}
+                                <>
+                                    <View style={{flex:1,flexDirection:'column',marginLeft:-3,alignSelf:'flex-start', transform: [{ rotate: '5deg' }] }} >
+                                        <TouchableOpacity
                                             style={{
-                                                width: Dimensions.get('window').width * 0.5,
-                                                height: Dimensions.get('window').height * 0.15,
-                                                //borderRadius: 12,
-                                                borderColor:'red',
-                                                
-                                                transform: [{ rotate: '3deg' }]
+                                                paddingTop: 15,
+                                                flex: 1,
+                                                flexDirection: 'column',
+                                                /* justifyContent: 'space-between', */
+                                                height: ((Dimensions.get('window').height/2)-260),
+                                               /*  overflow: 'hidden' */
                                             }}
-                                        />
-                                        <Text style={{position:'absolute',transform: [{ rotate: '5deg' }],marginTop:15,marginLeft:20,color:'white'}}>{value.nombre}</Text>
-                                        <Text style={{position:'absolute',transform: [{ rotate: '5deg' }],marginTop:30,marginLeft:20,color:'white'}} numberOfLines={3} numberOfLines={3}>impar{value.descripcion}</Text>
-                                    
-                                    </TouchableOpacity>
-                                    <View style={{marginTop:15,marginRight:5,flex:0.5,flexDirection:'row', borderTopRightRadius:30}} ></View>
+                                            onPress={() =>abrirSubCategoria(value)}
+                                        >
+                                            
+                                            <Image
+                                                source={{ uri: imagen }}
+                                                style={{
+                                                    width: Dimensions.get('window').width * 0.48,
+                                                    height: Dimensions.get('window').height * 0.15,
+                                                    borderColor:'red'
+                                                }}
+                                            />
+                                            <Text style={{position:'absolute',marginTop:15,marginLeft:20,color:'white'}}>{value.nombre}</Text>
+                                            <Text style={{position:'absolute',marginTop:30,marginLeft:20,color:'white'}} numberOfLines={3} numberOfLines={3}>par{value.descripcion}</Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={{flex:1,flexDirection:'column',marginLeft:5,alignSelf:'flex-end',paddingTop:15, transform: [{ rotate: '5deg' }],width: Dimensions.get('window').width *1}} >
+                                        <TouchableOpacity
+                                            style={{
+                                                paddingTop: 17,
+                                                flex: 1,
+                                                flexDirection: 'column',
+                                                /* justifyContent: 'space-between', */
+                                                height: ((Dimensions.get('window').height/2)-260),
+                                               /*  overflow: 'hidden' */
+                                            }}
+                                            onPress={() =>abrirSubCategoria(value)}
+                                        >
+                                            <Image
+                                                source={{ uri: value.logo }}
+                                                style={{
+                                                    width: Dimensions.get('window').width *0.6,
+                                                    height: Dimensions.get('window').height * 0.15,
+                                                    //borderRadius: 12,
+                                                    borderColor:'red'
+                                                }}
+                                            />
+                                            <Text style={{position:'absolute',marginTop:15,marginLeft:20,color:'white'}}>{value.nombre}</Text>
+                                            <Text style={{position:'absolute',marginTop:30,marginLeft:20,color:'white'}} numberOfLines={3} >impar{value.descripcion}</Text>
+                                        </TouchableOpacity>
+                                    </View>
+                                </>
+                                }
                             </View>
-                    
                     ))
                 )} 
-            </View>
+            
         </>
     )
 }

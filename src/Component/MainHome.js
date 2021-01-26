@@ -96,7 +96,9 @@ let tipo =  [{
                 {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/criptomoneda-blockchain-mineria-bitcoins-pago-digital-dinero-virtual-finanzas-computadora-isometrica-computadora-portatil-moneda-token_284092-301.jpg'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
                 {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-            ]
+                
+                ],
+                parimpar: 'par'
             },
             { 
               nombre: 'Async' , 
@@ -126,7 +128,8 @@ let tipo =  [{
                     {tipo:'imagen' , valor : 'https://image.freepik.com/vector-gratis/vector-isometrico-plano-intercambio-criptomonedas_109064-657.jpg'},
                     {tipo:'texto' , valor : 'Texto texto que se va a mostrar'},
                     {tipo:'texto' , valor : 'Texto texto que se va a mostrar'}
-                ]
+                ],
+                parimpar: 'par'
             },
             { 
               nombre: 'Async' , 
@@ -201,18 +204,18 @@ const MainHome = () => {
         <>
             <Header titulo={titulo} retornar={retorno} validarpaginaprincipal={mostrarTiposSeguridad} Colores={Colors.secondary}></Header>
 
-            <ScrollView style={{marginHorizontal: 5,  overflow: 'hidden'}} showsVerticalScrollIndicator={false}>
+            <ScrollView style={{marginHorizontal: 1,  overflow: 'hidden'}} showsVerticalScrollIndicator={false}>
                 {(isLoading) ? 
                     (
                         <SkeletonPlaceholder>
                             <SkeletonPlaceholder.Item flexDirection="column" alignItems="center" >
-                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} marginTop={25}/>
-                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
-                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
-                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
-                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
-                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
-                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} borderRadius={20} marginBottom={16} marginTop={25}/>
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} borderRadius={20}  marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} borderRadius={20}  marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} borderRadius={20}  marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} borderRadius={20}  marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} borderRadius={20}  marginBottom={16} />
+                                <SkeletonPlaceholder.Item width={Dimensions.get('window').width-20} height={80} borderRadius={20}  marginBottom={16} />
                             </SkeletonPlaceholder.Item>
                         </SkeletonPlaceholder>
                     )
