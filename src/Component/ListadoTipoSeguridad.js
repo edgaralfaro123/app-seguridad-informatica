@@ -31,11 +31,13 @@ const ListadoTiposSeguridad = (props) => {
     let imagen='';
     let titulo='';
     let descripcion='';
+    let valordatos ='';
 
-    const asignarPar = (logo,nombre,descripcion) => {
+    const asignarPar = (logo,nombre,descripcion,value) => {
         imagen=logo;
         titulo=nombre;
         descripcion=descripcion;
+        valordatos=value;
     }
     
     return (
@@ -44,12 +46,12 @@ const ListadoTiposSeguridad = (props) => {
                 {arrayListadoTipos.length>0 && (
 
                     arrayListadoTipos.map((value)=>(
-                        <View style={{marginTop:-9,marginRight:3,marginBottom:1,flex:1,flexDirection:'row'}} >
+                        <View style={{marginTop:-6,marginRight:3,marginBottom:1,flex:1,flexDirection:'row'}} >
                             {value.parimpar==="par" ?
-                                asignarPar(value.logo,value.nombre,value.descripcion)
+                                asignarPar(value.logo,value.nombre,value.descripcion,value)
                             :
                                 <>
-                                    <View style={{flex:1,flexDirection:'column',marginLeft:-3,alignSelf:'flex-start', transform: [{ rotate: '5deg' }] }} >
+                                    <View style={{flex:1,flexDirection:'column',marginLeft:-10,alignSelf:'flex-start', transform: [{ rotate: '5deg' }] }} >
                                         <TouchableOpacity
                                             style={{
                                                 paddingTop: 15,
@@ -57,17 +59,20 @@ const ListadoTiposSeguridad = (props) => {
                                                 flexDirection: 'column',
                                                 /* justifyContent: 'space-between', */
                                                 height: ((Dimensions.get('window').height/2)-260),
+                                               
                                                /*  overflow: 'hidden' */
                                             }}
-                                            onPress={() =>abrirSubCategoria(value)}
+                                            onPress={() =>abrirSubCategoria(valordatos)}
                                         >
                                             
                                             <Image
                                                 source={{ uri: imagen }}
                                                 style={{
-                                                    width: Dimensions.get('window').width * 0.48,
+                                                    width: Dimensions.get('window').width * 0.53,
                                                     height: Dimensions.get('window').height * 0.15,
-                                                    borderColor:'red'
+                                                    borderColor:'red',
+                                                    borderTopRightRadius:150,
+                                                    /* borderWidth:4 */
                                                 }}
                                             />
                                             <Text style={{position:'absolute',marginTop:15,marginLeft:20,color:'white'}}>{value.nombre}</Text>
@@ -75,7 +80,7 @@ const ListadoTiposSeguridad = (props) => {
                                         </TouchableOpacity>
                                     </View>
 
-                                    <View style={{flex:1,flexDirection:'column',marginLeft:5,alignSelf:'flex-end',paddingTop:15, transform: [{ rotate: '5deg' }],width: Dimensions.get('window').width *1}} >
+                                    <View style={{flex:1,flexDirection:'column',marginLeft:0,alignSelf:'flex-end',paddingTop:15, transform: [{ rotate: '5deg' }],width: Dimensions.get('window').width *1}} >
                                         <TouchableOpacity
                                             style={{
                                                 paddingTop: 17,
@@ -83,6 +88,7 @@ const ListadoTiposSeguridad = (props) => {
                                                 flexDirection: 'column',
                                                 /* justifyContent: 'space-between', */
                                                 height: ((Dimensions.get('window').height/2)-260),
+                                                
                                                /*  overflow: 'hidden' */
                                             }}
                                             onPress={() =>abrirSubCategoria(value)}
@@ -90,10 +96,12 @@ const ListadoTiposSeguridad = (props) => {
                                             <Image
                                                 source={{ uri: value.logo }}
                                                 style={{
-                                                    width: Dimensions.get('window').width *0.6,
+                                                    width: Dimensions.get('window').width *0.55,
                                                     height: Dimensions.get('window').height * 0.15,
                                                     //borderRadius: 12,
-                                                    borderColor:'red'
+                                                    borderColor:'red',
+                                                    borderBottomLeftRadius: 150,
+                                                    /* borderWidth: 4 */
                                                 }}
                                             />
                                             <Text style={{position:'absolute',marginTop:15,marginLeft:20,color:'white'}}>{value.nombre}</Text>
