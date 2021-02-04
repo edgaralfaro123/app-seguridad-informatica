@@ -27,7 +27,7 @@ const DetalleListadoTipoSeguirdad = (props) =>{
                     (value.tipo !== undefined) ?
                         //Valido si viene un texto
                         (value.tipo == 'texto') ?
-                            <View style={{marginBottom: 5,marginTop: 5}}>
+                            <View style={{marginBottom: Dimensions.get('window').height *0.01,marginTop: Dimensions.get('window').height *0.01}}>
                                 <Text>{value.valor}</Text>
                             </View>
                         :
@@ -37,8 +37,8 @@ const DetalleListadoTipoSeguirdad = (props) =>{
                                     <Image
                                         source={{ uri: value.valor }}
                                         style={{
-                                            width: Dimensions.get('window').width * 0.85,
-                                            height: Dimensions.get('window').height * 0.20,
+                                            width: Dimensions.get('window').width * 0.99,
+                                            height: Dimensions.get('window').height * 0.25,
                                             borderRadius: 30,
                                             borderColor:'red',
                                         }}
