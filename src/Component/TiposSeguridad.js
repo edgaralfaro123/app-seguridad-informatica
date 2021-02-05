@@ -25,7 +25,7 @@ const TiposSeguridad = (props) => {
             
                 {arraytiposseguridad.length>0 && (
                     arraytiposseguridad.map((value,key)=>(
-                            <View style={{marginTop:15,marginLeft:5,marginRight:5, borderTopRightRadius:30}} key={key}>
+                            <View style={{marginTop:15,marginLeft:5,marginRight:5, borderTopRightRadius:30,backgroundColor:Colors.back}} key={key}>
                                 <TouchableOpacity
                                     style={{
                                         flex: 1,

@@ -201,10 +201,10 @@ const MainHome = () => {
     }
 
     return (
-        <>
-            <Header titulo={titulo} retornar={retorno} validarpaginaprincipal={mostrarTiposSeguridad} Colores={Colors.secondary}></Header>
+        <View style={{backgroundColor:'red',height:'400'}}>
+            <Header titulo={titulo} retornar={retorno} validarpaginaprincipal={mostrarTiposSeguridad} Colores={Colors.back}></Header>
 
-            <ScrollView style={{marginHorizontal: 1,  overflow: 'hidden'}} showsVerticalScrollIndicator={false}>
+            <ScrollView style={{marginHorizontal: 1,  overflow: 'hidden',backgroundColor:Colors.back}} showsVerticalScrollIndicator={false}>
                 {(isLoading) ? 
                     (
                         <SkeletonPlaceholder>
@@ -224,8 +224,7 @@ const MainHome = () => {
                         (mostrarTiposSeguridad) ?
                             
                                 <TiposSeguridad arraytiposseguridad={arrayTipos} buscar={abrirCategoria}></TiposSeguridad>
-                           
-                           
+
                         :
                             (mostrarListadoTiposSeguridad) ?
                             <View style={{marginTop:10}}>
@@ -239,7 +238,7 @@ const MainHome = () => {
                 
                 }
             </ScrollView>
-        </>
+        </View>
     )
 }
 

@@ -15,6 +15,7 @@ import {
     TouchableOpacity,
     Dimensions
 } from 'react-native';
+import Colors from "../Themes/Colors";
 
 const ListadoTiposSeguridad = (props) => {
     const {arrayListadoTipos = [] , buscar:abrirSubCategoria = undefined }={...props}
@@ -45,8 +46,8 @@ const ListadoTiposSeguridad = (props) => {
            
                 {arrayListadoTipos.length>0 && (
 
-                    arrayListadoTipos.map((value)=>(
-                        <View style={{marginTop:-6,marginRight:3,marginBottom:1,flex:1,flexDirection:'row'}} >
+                    arrayListadoTipos.map((value,key)=>(
+                        <View key={key} style={{marginTop:-6,marginRight:3,marginBottom:1,flex:1,flexDirection:'row'}} >
                             {value.parimpar==="par" ?
                                 asignarPar(value.logo,value.nombre,value.descripcion,value)
                             :
@@ -75,8 +76,8 @@ const ListadoTiposSeguridad = (props) => {
                                                     /* borderWidth:4 */
                                                 }}
                                             />
-                                            <Text style={{position:'absolute',marginTop:15,marginLeft:20,color:'white'}}>{value.nombre}</Text>
-                                            <Text style={{position:'absolute',marginTop:30,marginLeft:20,color:'white'}} numberOfLines={3} numberOfLines={3}>par{value.descripcion}</Text>
+                                            <Text style={{position:'absolute',marginTop:15,marginLeft:20,color:Colors.back}}>{value.nombre}</Text>
+                                            <Text style={{position:'absolute',marginTop:30,marginLeft:20,color:Colors.back}} numberOfLines={3} numberOfLines={3}>par{value.descripcion}</Text>
                                         </TouchableOpacity>
                                     </View>
 

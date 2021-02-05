@@ -15,6 +15,8 @@ import {
     TouchableOpacity,
     Dimensions
 } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Colores from "../Themes/Colors";
 
 const DetalleListadoTipoSeguirdad = (props) =>{
     const {arrayDetalleListadoTipos = [] } = {...props}
@@ -28,7 +30,7 @@ const DetalleListadoTipoSeguirdad = (props) =>{
                         //Valido si viene un texto
                         (value.tipo == 'texto') ?
                             <View style={{marginBottom: Dimensions.get('window').height *0.01,marginTop: Dimensions.get('window').height *0.01}}>
-                                <Text>{value.valor}</Text>
+                                <Text style={{color:Colores.secondary}}>{value.valor}</Text>
                             </View>
                         :
                             //Valido si viene una imagen
@@ -38,9 +40,7 @@ const DetalleListadoTipoSeguirdad = (props) =>{
                                         source={{ uri: value.valor }}
                                         style={{
                                             width: Dimensions.get('window').width * 0.99,
-                                            height: Dimensions.get('window').height * 0.25,
-                                            borderRadius: 30,
-                                            borderColor:'red',
+                                            height: Dimensions.get('window').height * 0.25
                                         }}
                                     />
                                 </View>
